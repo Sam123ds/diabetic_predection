@@ -19,14 +19,14 @@ bmi = st.number_input("BMI", 0.0, 70.0, 25.0)
 dpf = st.number_input("Diabetes Pedigree Function", 0.0, 3.0, 0.5)
 age = st.number_input("Age", 1, 120, 30)
 
-if st.button("Predict"):
+if st.button("Click here to get your prediction"):
     # 3. Create feature list (Ensure order matches your training data!)
     features = [[preg, gluco, bp, skin, insulin, bmi, dpf, age]] 
     
     # 4. Scale and Predict
     scaled_features = scaler.transform(features)
     prediction = model.predict(scaled_features)
-    
+    # st.write("The predicted price of Your House is: Rupees ",prediction[0])
     if prediction[0] == 1:
         st.error("The model predicts a high risk of diabetes.")
     else:
