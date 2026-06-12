@@ -1,0 +1,17 @@
+Machine Learning Deployment:
+
+1. create the 'joblib'/'pickle' file of the model(Scaler/Encoder as well).
+
+2. create a "requirements.txt" file, mentioning all the required librarires 
+   to be run during the deployment, in it.
+3. create an app.py file:a) which will take the inputs required as per the dataset features.
+			 b) then use the respective joblib files(Scaler/ Encoder) to convert 
+			    the data into the one that has to be passed in the model's joblib file.
+			 c) Use model's ( and scaler/ LabelEncoder, if any) joblib file(s) to predict this final input.
+			 d) Finally, use streamlit to create the button which wiil do all these 
+			    processing and show the result.
+	Please Note: copy all above commands from jupyter notebook on to notebook and sav as, app.py (to create Python File) 
+4. Upload all these files(joblib files, requirements.txt, app.py) on to respective GitHub Repository.
+5. Login into www.https://share.streamlit.io with github account.(for connection).
+6. Click on "Create app", and follow the instructions respectively.
+7. ML Deployment page is ready to take inputs and predict accordingly.
